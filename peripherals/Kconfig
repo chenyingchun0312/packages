@@ -2,6 +2,7 @@ menu "peripheral libraries and drivers"
 
 # source "$PKGS_DIR/packages/peripherals//Kconfig"
 
+source "$PKGS_DIR/packages/peripherals/tinyusb2rtt/Kconfig"
 source "$PKGS_DIR/packages/peripherals/sensors/Kconfig"
 source "$PKGS_DIR/packages/peripherals/realtek_ameba/Kconfig"
 source "$PKGS_DIR/packages/peripherals/sht2x/Kconfig"
@@ -74,4 +75,5 @@ source "$PKGS_DIR/packages/peripherals/Misaka_AT24CXX/Kconfig"
 source "$PKGS_DIR/packages/peripherals/Misaka_RGB_Bling/Kconfig"
 source "$PKGS_DIR/packages/peripherals/lora_gw_driver_lib/Kconfig"
 source "$PKGS_DIR/packages/peripherals/bouffalolab_sdk/Kconfig"
+
 endmenu

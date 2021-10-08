@@ -1,0 +1,202 @@
+# Kconfig file for package tinyusb2rtt
+menuconfig PKG_USING_TINYUSB2RTT
+    bool "tinyusb2rtt: tinyusb Host/Device stack for embedded system."
+    default n
+
+if PKG_USING_TINYUSB2RTT
+    choice
+        prompt "tinyusb host/device stack select"
+        default PKG_USING_TINYUSB2RTT_USBD
+
+        config PKG_USING_TINYUSB2RTT_USBD
+        bool "device"
+
+        config PKG_USING_TINYUSB2RTT_USBH
+        bool "host"
+    endchoice
+
+    choice
+        prompt "usb device class select"
+        default PKG_USING_TINYUSB2RTT_DEVICE_CDC
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_CDC
+        bool "CDC"
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_AUDIO
+        bool "AUDIO"
+        
+        config PKG_USING_TINYUSB2RTT_DEVICE_DFU
+        bool "DFU"
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_DFU_RT
+        bool "DFU RT"
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_HID
+        bool "HID"
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_MIDI
+        bool "MIDI"
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_MSC
+        bool "MSC"
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_NET
+        bool "NET"
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_USBTMC
+        bool "USBTMC"
+
+        config PKG_USING_TINYUSB2RTT_DEVICE_VENDOR
+        bool "VENDOR"
+    endchoice
+
+    choice
+        prompt "mcu select"
+        default PKG_USING_TINYUSB2RTT_MCU_NRF5X
+
+        config PKG_USING_TINYUSB2RTT_MCU_LPC11UXX
+        bool "NXP LPC11Uxx"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC13XX
+        bool "NXP LPC13xx"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC15XX
+        bool "NXP LPC15xx"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC175X_6X
+        bool "NXP LPC175x, LPC176x"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC177X_8X
+        bool "NXP LPC177x, LPC178x"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC18XX
+        bool "NXP LPC18xx"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC40XX
+        bool "NXP LPC40xx"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC43XX
+        bool "NXP LPC43xx"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC51UXX
+        bool "NXP LPC51U6x"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC54XXX
+        bool "NXP LPC54xxx"
+        config PKG_USING_TINYUSB2RTT_MCU_LPC55XX
+        bool "NXP LPC55xx"
+
+        config PKG_USING_TINYUSB2RTT_MCU_NRF5X
+        bool "Nordic nRF5x series"
+
+        config PKG_USING_TINYUSB2RTT_MCU_SAMD21
+        bool "MicroChip SAMD21"
+        config PKG_USING_TINYUSB2RTT_MCU_SAMD51
+        bool "MicroChip SAMD51"
+        config PKG_USING_TINYUSB2RTT_MCU_SAMG
+        bool "MicroChip SAMDG series"
+        config PKG_USING_TINYUSB2RTT_MCU_SAME5X
+        bool "MicroChip SAM E5x"
+        config PKG_USING_TINYUSB2RTT_MCU_SAMD11
+        bool "MicroChip SAMD11"
+        config PKG_USING_TINYUSB2RTT_MCU_SAML22
+        bool "MicroChip SAML22"
+        config PKG_USING_TINYUSB2RTT_MCU_SAML21
+        bool "MicroChip SAML21"
+        config PKG_USING_TINYUSB2RTT_MCU_SAMX7X 
+        bool "MicroChip SAME70, S70, V70, V71 family"
+
+        config PKG_USING_TINYUSB2RTT_MCU_STM32F0
+        bool "ST STM32F0"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32F1
+        bool "ST STM32F1"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32F2
+        bool "ST STM32F2"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32F3
+        bool "ST STM32F3"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32F4
+        bool "ST STM32F4"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32F7
+        bool "ST STM32F7"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32H7
+        bool "ST STM32H7"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32L0
+        bool "ST STM32L0"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32L1
+        bool "ST STM32L1"
+        config PKG_USING_TINYUSB2RTT_MCU_STM32L4
+        bool "ST STM32L4"
+
+        config PKG_USING_TINYUSB2RTT_MCU_CXD56
+        bool "SONY CXD56"
+
+        config PKG_USING_TINYUSB2RTT_MCU_MSP430x5xx
+        bool "TI MSP430x5xx"
+
+        config PKG_USING_TINYUSB2RTT_MCU_VALENTYUSB_EPTRI
+        bool "Fomu eptri"
+
+        config PKG_USING_TINYUSB2RTT_MCU_MIMXRT10XX
+        bool "NXP iMX RT10xx"
+
+        config PKG_USING_TINYUSB2RTT_MCU_NUC121
+        bool "Nuvoton NUC121"
+        config PKG_USING_TINYUSB2RTT_MCU_NUC126
+        bool "Nuvoton NUC126"
+        config PKG_USING_TINYUSB2RTT_MCU_NUC120
+        bool "Nuvoton NUC120"
+        config PKG_USING_TINYUSB2RTT_MCU_NUC505
+        bool "Nuvoton NUC505"
+
+        config PKG_USING_TINYUSB2RTT_MCU_ESP32S2
+        bool "Espressif ESP32-S2"
+        config PKG_USING_TINYUSB2RTT_MCU_ESP32S3
+        bool "Espressif ESP32-S3"
+
+        config PKG_USING_TINYUSB2RTT_MCU_DA1469X
+        bool "Dialog Semiconductor DA1469x"
+
+        config PKG_USING_TINYUSB2RTT_MCU_RP2040
+        bool "Raspberry Pi RP2040"
+
+        config PKG_USING_TINYUSB2RTT_MCU_MKL25ZXX
+        bool "NXP MKL25Zxx"
+        config PKG_USING_TINYUSB2RTT_MCU_K32L2BXX
+        bool "NXP K32L2Bxx"
+
+        config PKG_USING_TINYUSB2RTT_MCU_EFM32GG
+        bool "Silabs EFM32GG"
+        config PKG_USING_TINYUSB2RTT_MCU_EFM32GG11
+        bool "Silabs EFM32GG11"
+        config PKG_USING_TINYUSB2RTT_MCU_EFM32GG12
+        bool "Silabs EFM32GG12"
+
+        config PKG_USING_TINYUSB2RTT_MCU_RX63X
+        bool "Renesas RX63N/631"
+        config PKG_USING_TINYUSB2RTT_MCU_RX65X
+        bool "Renesas RX65N/RX651"
+        config PKG_USING_TINYUSB2RTT_MCU_RX72N
+        bool "Renesas RX72N"
+
+        config PKG_USING_TINYUSB2RTT_MCU_MM32F327X
+        bool "Mind Motion MM32F327"
+
+        config PKG_USING_TINYUSB2RTT_MCU_GD32VF103
+        bool "GigaDevice GD32VF103"
+    endchoice
+
+    config PKG_TINYUSB2RTT_PATH
+        string
+        default "/packages/peripherals/tinyusb2rtt"
+
+    choice
+        prompt "Version"
+        default PKG_USING_TINYUSB2RTT_LATEST_VERSION
+        help
+            Select the package version
+
+        config PKG_USING_TINYUSB2RTT_V100
+            bool "v1.0.0"
+
+        config PKG_USING_TINYUSB2RTT_LATEST_VERSION
+            bool "latest"
+    endchoice
+          
+    config PKG_TINYUSB2RTT_VER
+       string
+       default "v1.0.0"    if PKG_USING_TINYUSB2RTT_V100
+       default "latest"    if PKG_USING_TINYUSB2RTT_LATEST_VERSION
+
+endif
+

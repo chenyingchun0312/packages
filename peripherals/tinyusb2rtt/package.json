@@ -1,0 +1,34 @@
+{
+  "name": "tinyusb2rtt",
+  "description": "USB Host/Device stack for embedded system.",
+  "description_zh": "嵌入式 USB HOST/Device 协议栈。",  
+  "enable": "PKG_USING_TINYUSB2RTT", 
+  "keywords": [
+    "tinyusb2rtt"
+  ],
+  "category": "peripherals",
+  "author": {
+    "name": "chenyingchun0312",
+    "email": "chenyingchun0312@163.com",
+    "github": "chenyingchun0312"
+  },
+  "license": "MIT",
+  "repository": "E:/02_community/03_RT-Thread/02_rt_thread/chenyingchun/tinyusb2rtt",
+  "icon": "unknown",
+  "homepage": "unknown",
+  "doc": "unknown",
+  "site": [
+    {
+      "version": "v1.0.0",
+      "URL": "https://tinyusb2rtt-1.0.0.zip",
+      "filename": "tinyusb2rtt-1.0.0.zip",
+      "VER_SHA": "fill in the git version SHA value"
+    },
+    {
+      "version": "latest",
+      "URL": "E:/02_community/03_RT-Thread/02_rt_thread/chenyingchun/tinyusb2rtt",
+      "filename": "tinyusb2rtt for git package",
+      "VER_SHA": "fill in latest version branch name, such as master"
+    }
+  ]
+}
